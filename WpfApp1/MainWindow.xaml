@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Width="15" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="15" >A</TextBlock>
+        <TextBlock Width="15" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,20" FontSize="15" Text="A"/>
+        <TextBlock Width="15" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="90,20" FontSize="15" Text="B"/>
+        <TextBlock Width="15" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="150,20" FontSize="15" Text="C"/>
+        <TextBox Text="{Binding Path=A,ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged }" x:Name="TextBoxA" Width="40" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,50"/>
+        <TextBox Text="{Binding Path=B,ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged }" x:Name="TextBoxB" Width="40" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,50"/>
+        <TextBox Text="{Binding Path=C,ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged }" x:Name="TextBoxC" Width="40" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,50"/>
+        <Button Width="50" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,80" Content="Расчёт" Click="Button_Click"/>
+        <Border Width="100" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,80" BorderThickness="0.5" BorderBrush="Black">
+            <TextBlock Text="{Binding Path=Rez,ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged }" x:Name="TextBoxR"/>
+        </Border>
     </Grid>
 </Window>
