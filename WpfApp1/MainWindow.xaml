@@ -26,5 +26,13 @@
         <TextBox Text="{Binding Path=Max,ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged }" x:Name="TextBoxMax" Width="40" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,160"/>
         <TextBlock Width="24" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,190" Text="Шаг"/>
         <TextBox Text="{Binding Path=N,ValidatesOnExceptions=true, NotifyOnValidationError=true }" x:Name="TextBoxN" Width="40" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,190"/>
+        <DataGrid Name="DataGrid" AutoGenerateColumns="False" Width="180" Height="170" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,220,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="A" Binding="{Binding A }" IsReadOnly="True"/>
+                <DataGridTextColumn Header="B" Binding="{Binding B }" IsReadOnly="True"/>
+                <DataGridTextColumn Header="C" Binding="{Binding C }" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Res" Binding="{Binding Rez }" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
