@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="469" Width="624">
     <Grid>
         <TextBlock Width="15" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,20" FontSize="15" Text="A"/>
         <TextBlock Width="15" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="90,20" FontSize="15" Text="B"/>
@@ -17,5 +17,14 @@
         <Border Width="100" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,80" BorderThickness="0.5" BorderBrush="Black">
             <TextBlock Text="{Binding Path=Rez,ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged }" x:Name="TextBoxR"/>
         </Border>
+        <Grid Margin="240,50,0,0" HorizontalAlignment="Left" Width="200" Height="200" Name="gridGraf" Background="Silver" MouseWheel="grid_MouseWheel" MouseDown="grid_MouseMove" VerticalAlignment="Top"/>
+        <Grid Margin="210,50,0,0" Name="grid_znachY" Width="24" Height="200" HorizontalAlignment="Left" Background="Silver" VerticalAlignment="Top"/>
+        <Grid Margin="240,260,0,0" Name="grid_znachX" Height="24" Width="200" HorizontalAlignment="Left" Background="Silver" VerticalAlignment="Top"/>
+        <TextBlock Width="15" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,160" Text="От"/>
+        <TextBox Text="{Binding Path=Min,ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged }" x:Name="TextBoxMin" Width="40" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,160"/>
+        <TextBlock Width="15" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,160" Text="До"/>
+        <TextBox Text="{Binding Path=Max,ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged }" x:Name="TextBoxMax" Width="40" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,160"/>
+        <TextBlock Width="24" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,190" Text="Шаг"/>
+        <TextBox Text="{Binding Path=N,ValidatesOnExceptions=true, NotifyOnValidationError=true }" x:Name="TextBoxN" Width="40" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,190"/>
     </Grid>
 </Window>
