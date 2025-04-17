@@ -17,6 +17,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static List<Fx> LFx;
         int hg;
         double hf = 32, hx, hy;
         //double verh, niz, h=1;
@@ -65,9 +66,11 @@ namespace WpfApp1
             TextBoxA.DataContext = s_Fx;
             TextBoxB.DataContext = s_Fx;
             TextBoxC.DataContext = s_Fx;
+            TextBoxC.DataContext = s_Fx;
             TextBoxMin.DataContext = s_Grafic;
             TextBoxMax.DataContext = s_Grafic;
             TextBoxN.DataContext = s_Grafic;
+            LFx = new List<Fx>();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -93,6 +96,17 @@ namespace WpfApp1
                 text.Text = "Параметры заданы\nнекорректно";
                 gridGraf.Children.Add(text);
             }
+            LFx.Add(s_Fx);
+            s_Fx = new Fx();
+            TextBoxA.DataContext = s_Fx;
+            TextBoxB.DataContext = s_Fx;
+            TextBoxC.DataContext = s_Fx;
+            TextBoxC.DataContext = s_Fx;
+            TextBoxMin.DataContext = s_Grafic;
+            TextBoxMax.DataContext = s_Grafic;
+            TextBoxN.DataContext = s_Grafic;
+            DataGrid.ItemsSource = null;
+            DataGrid.ItemsSource = LFx;
         }
         private void Loginc(object sender, EventArgs e)
         {
