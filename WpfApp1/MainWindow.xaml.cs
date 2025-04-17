@@ -47,6 +47,7 @@ namespace WpfApp1
             TextBoxA.DataContext = s_Fx;
             TextBoxB.DataContext = s_Fx;
             TextBoxC.DataContext = s_Fx;
+            TextBoxC.DataContext = s_Fx;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
